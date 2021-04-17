@@ -2,19 +2,90 @@
 
 namespace ariel{
 
-    void read_units(){}
-    NumberWithUnits::NumberWithUnits(): km(0), m(0), kg(0),g(0),ton(0),hour(0),min(0),sec(0),USD(0),ILS(0){}
-    NumberWithUnits::NumberWithUnits(int km, int m, int kg, int g, int ton, int h, int min, int sec, int USD, int ILS):
-                km(km), m(m), kg(kg),g(g),ton(ton),hour(h),min(min),sec(sec),USD(USD),ILS(ILS) {}
+    char read_units(char a){
+        return ' ';
+    }
+    NumberWithUnits::NumberWithUnits():t(0), temp{""} {}
+    NumberWithUnits::NumberWithUnits(int num, string const& a){
+        // this->t = num;
+        // this->temp = a;
+    }
 
 
-    bool operator==(NumberWithUnits& n1, NumberWithUnits& n2){}
-    bool operator!=(NumberWithUnits& n1, NumberWithUnits& n2){}
-    bool operator>(NumberWithUnits& n1, NumberWithUnits& n2){}
-    bool operator>=(NumberWithUnits& n1, NumberWithUnits& n2){}
-    bool operator<=(NumberWithUnits& n1, NumberWithUnits& n2){}
-    bool operator<(NumberWithUnits& n1, NumberWithUnits& n2){}
+    // Numeric operators
+    NumberWithUnits operator+(const NumberWithUnits& a, NumberWithUnits b){
+        return a;
+    }
+    NumberWithUnits operator+=(const NumberWithUnits& a, NumberWithUnits b){
+        return a;
+    }
+    NumberWithUnits operator-(const NumberWithUnits& a, NumberWithUnits b){
+        return a;
+    }
+    NumberWithUnits operator-=(const NumberWithUnits& a, NumberWithUnits b){
+        return a;
+    }
+    NumberWithUnits operator*(const NumberWithUnits& a, double other){
+        return a;
+    }
             
+    
+    NumberWithUnits operator+(unsigned int a, const NumberWithUnits b){
+        return b;
+    }
+    NumberWithUnits operator+=(unsigned int a, const NumberWithUnits b){
+        return b;
+    }
+    NumberWithUnits operator-(unsigned int a, const NumberWithUnits b){
+        return b;
+    }
+    NumberWithUnits operator-=(unsigned int a, const NumberWithUnits b){
+        return b;
+    }            
+
+    // ++ --
+    NumberWithUnits operator++(const NumberWithUnits& a){
+        return a;
+        }
+    NumberWithUnits operator--(const NumberWithUnits& a){
+        return a;
+        }
+
+    // Uneric + & -
+    const NumberWithUnits operator+(const NumberWithUnits& a){
+        return a;
+        }
+    const NumberWithUnits operator-(const NumberWithUnits& a){
+        return a;
+        }
+            
+    // Comperation Operator Overload
+    bool operator==(const NumberWithUnits& n1, NumberWithUnits& n2){
+        return true;
+    }
+    bool operator!=(const NumberWithUnits& n1, NumberWithUnits& n2){
+        return true;
+    }
+    bool operator>(const NumberWithUnits& n1, NumberWithUnits& n2){
+        return true;
+    }
+    bool operator>=(const NumberWithUnits& n1, NumberWithUnits& n2){
+        return true;
+    }
+    bool operator<=(const NumberWithUnits& n1, NumberWithUnits& n2){
+        return true;
+    }
+    bool operator<(const NumberWithUnits& n1, NumberWithUnits& n2){
+        return true;
+    }
+       
+    // Streamming Operator Overload        
+    ostream& operator>>(ostream& input, NumberWithUnits& num){
+        return input;
+    }
+    ostream& operator<<(ostream& output, NumberWithUnits& num){
+        return output;
+    }
 
 
 
