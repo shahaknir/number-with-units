@@ -80,10 +80,10 @@ namespace ariel{
     }
        
     // Streamming Operator Overload        
-    ostream& operator>>(ostream& input, NumberWithUnits& num){
+    ostream& operator>>(ostream& input, const NumberWithUnits& num){
         return input;
     }
-    ostream& operator<<(ostream& output, NumberWithUnits& num){
+    ostream& operator<<(ostream& output, const NumberWithUnits& num){
         return output;
     }
 

@@ -26,18 +26,18 @@ namespace ariel
             friend NumberWithUnits operator-=(const NumberWithUnits& a, NumberWithUnits b);
             friend NumberWithUnits operator*(const NumberWithUnits& a, double other);
             
-            friend NumberWithUnits operator+(unsigned int a, NumberWithUnits b);
-            friend NumberWithUnits operator+=(unsigned int a, NumberWithUnits b);
-            friend NumberWithUnits operator-(unsigned int a, NumberWithUnits b);
-            friend NumberWithUnits operator-=(unsigned int a, NumberWithUnits b);
+            friend NumberWithUnits operator+(unsigned int a, const NumberWithUnits b);
+            friend NumberWithUnits operator+=(unsigned int a, const NumberWithUnits b);
+            friend NumberWithUnits operator-(unsigned int a, const NumberWithUnits b);
+            friend NumberWithUnits operator-=(unsigned int a, const NumberWithUnits b);
 
             // ++ --
-            friend NumberWithUnits operator++(NumberWithUnits& a);
-            friend NumberWithUnits operator--(NumberWithUnits& a);
+            friend NumberWithUnits operator++(const NumberWithUnits& a);
+            friend NumberWithUnits operator--(const NumberWithUnits& a);
 
             // Uneric + & -
-            friend const NumberWithUnits operator+(NumberWithUnits& a);
-            friend const NumberWithUnits operator-(NumberWithUnits& a);
+            friend const NumberWithUnits operator+(const NumberWithUnits& a);
+            friend const NumberWithUnits operator-(const NumberWithUnits& a);
             
             // Comperation Operator Overload
             friend bool operator==(const NumberWithUnits& n1, NumberWithUnits& n2);
@@ -48,8 +48,8 @@ namespace ariel
             friend bool operator<(const NumberWithUnits& n1, NumberWithUnits& n2);
             
             // Streamming Operator Overload
-            friend ostream& operator>>(ostream& input, NumberWithUnits& num);
-            friend ostream& operator<<(ostream& output, NumberWithUnits& num);
+            friend ostream& operator>>(ostream& input, const NumberWithUnits& num);
+            friend ostream& operator<<(ostream& output, const NumberWithUnits& num);
 
     };
 } // namespace ariel
