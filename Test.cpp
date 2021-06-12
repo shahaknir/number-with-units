@@ -18,7 +18,7 @@ using namespace std;
 ifstream units_file{"units.txt"};
 
 std::random_device random_engine;
-int max_range;
+int max_range = UINT16_MAX;
 std::uniform_int_distribution<int> random_num_range(0, max_range);
 
 
