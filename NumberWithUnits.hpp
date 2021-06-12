@@ -18,12 +18,10 @@
 using namespace std;
 namespace ariel {
     class NumberWithUnits{
-    private:
+    public:
         string unit_name;
         double unit_quantity;
 
-
-    public:
         /**
          * empty constructor
         */
